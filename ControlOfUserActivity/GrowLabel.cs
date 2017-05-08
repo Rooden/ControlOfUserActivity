@@ -1,0 +1,50 @@
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace ControlOfUserActivity
+{
+    public class GrowLabel : Label
+    {
+        private bool _mGrowing;
+        public GrowLabel()
+        {
+            // ReSharper disable once VirtualMemberCallInConstructor
+            AutoSize = false;
+        }
+        private void ResizeLabel()
+        {
+            if (_mGrowing) return;
+
+            try
+            {
+                _mGrowing = true;
+                var sz = new Size(Width, Int32.MaxValue);
+                sz = TextRenderer.MeasureText(Text, Font, sz, TextFormatFlags.WordBreak);
+                Height = sz.Height;
+            }
+            finally
+            {
+                _mGrowing = false;
+            }
+        }
+
+        protected override void OnTextChanged(EventArgs e)
+        {
+            base.OnTextChanged(e);
+            ResizeLabel();
+        }
+
+        protected override void OnFontChanged(EventArgs e)
+        {
+            base.OnFontChanged(e);
+            ResizeLabel();
+        }
+
+        protected override void OnSizeChanged(EventArgs e)
+        {
+            base.OnSizeChanged(e);
+            ResizeLabel();
+        }
+    }
+}
