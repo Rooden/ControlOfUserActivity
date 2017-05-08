@@ -15,7 +15,7 @@ namespace ControlOfUserActivity
 Aenean et massa efficitur, lacinia lectus sed, porta lorem. 
 Sed venenatis id lectus et posuere. Phasellus lacinia leo a orci efficitur, at fermentum justo commodo. 
 Maecenas nisi massa, commodo id magna quis, varius convallis sapien. Vivamus sagittis urna orci, vitae ornare urna feugiat ac.",
-                Width = 400
+                Width = 300
             };
             Controls.Add(newsControl);
         }

@@ -20,6 +20,9 @@ namespace ControlOfUserActivity
         public NewsControl()
         {
             InitializeComponent();
+
+            new Font().SetExo2Font(lblHeader, 13, System.Drawing.FontStyle.Bold);
+            new Font().SetExo2Font(lblBody, 10);
         }
     }
 }
