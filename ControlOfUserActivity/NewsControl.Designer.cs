@@ -42,24 +42,27 @@
             this.flowPanel.Controls.Add(this.lblBody);
             this.flowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.flowPanel.Location = new System.Drawing.Point(0, 0);
             this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Size = new System.Drawing.Size(306, 26);
+            this.flowPanel.Size = new System.Drawing.Size(123, 38);
             this.flowPanel.TabIndex = 0;
             // 
             // lblHeader
             // 
-            this.lblHeader.Location = new System.Drawing.Point(3, 0);
+            this.lblHeader.Location = new System.Drawing.Point(3, 3);
+            this.lblHeader.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(300, 13);
+            this.lblHeader.Size = new System.Drawing.Size(100, 13);
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "lblHeader";
             // 
             // lblBody
             // 
-            this.lblBody.Location = new System.Drawing.Point(3, 13);
+            this.lblBody.Location = new System.Drawing.Point(3, 22);
+            this.lblBody.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.lblBody.Name = "lblBody";
-            this.lblBody.Size = new System.Drawing.Size(300, 13);
+            this.lblBody.Size = new System.Drawing.Size(100, 13);
             this.lblBody.TabIndex = 1;
             this.lblBody.Text = "lblBody";
             // 
@@ -71,7 +74,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.flowPanel);
             this.Name = "NewsControl";
-            this.Size = new System.Drawing.Size(306, 26);
+            this.Size = new System.Drawing.Size(123, 38);
             this.flowPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

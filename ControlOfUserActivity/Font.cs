@@ -23,7 +23,7 @@ namespace ControlOfUserActivity
             Marshal.Copy(fontArray, 0, ptrData, dataLenght);
 
             uint cFonts = 0;
-            AddFontMemResourceEx(ptrData, (uint) fontArray.Length, IntPtr.Zero, ref cFonts);
+            AddFontMemResourceEx(ptrData, (uint)fontArray.Length, IntPtr.Zero, ref cFonts);
 
             var pcf = new PrivateFontCollection();
             pcf.AddMemoryFont(ptrData, dataLenght);

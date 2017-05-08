@@ -6,10 +6,11 @@ namespace ControlOfUserActivity
     {
         public int LabelMaxWidth
         {
+            get { return lblHeader.Width; }
             set
             {
                 foreach (Label label in flowPanel.Controls)
-                    label.Width = value;
+                    label.Width = value - label.Margin.Right;
             }
         }
 
@@ -20,6 +21,9 @@ namespace ControlOfUserActivity
         public NewsControl()
         {
             InitializeComponent();
+
+            // ReSharper disable once VirtualMemberCallInConstructor
+            MinimumSize = new System.Drawing.Size(300, 300);
 
             new Font().SetExo2Font(lblHeader, 13, System.Drawing.FontStyle.Bold);
             new Font().SetExo2Font(lblBody, 10);
