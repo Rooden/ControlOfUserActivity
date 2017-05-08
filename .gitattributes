@@ -1,0 +1,2 @@
+# This won't normalise line endings, but it will ensure that merge drivers use CRLF
+* -text eol=crlf
