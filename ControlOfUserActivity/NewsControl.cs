@@ -4,7 +4,7 @@ namespace ControlOfUserActivity
 {
     public partial class NewsControl : UserControl
     {
-        public int LabelMaxWidth
+        public int LabelWidth
         {
             get { return lblHeader.Width; }
             set

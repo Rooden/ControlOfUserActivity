@@ -13,6 +13,7 @@ namespace ControlOfUserActivity
 
             _newsControl = new NewsControl
             {
+                LabelWidth = 300,
                 HeaderText = @"Lorem Ipsum",
                 BodyText = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum tempus scelerisque. Nulla viverra tempor erat ut laoreet. 
 Aenean et massa efficitur, lacinia lectus sed, porta lorem. 
@@ -24,7 +25,7 @@ Maecenas nisi massa, commodo id magna quis, varius convallis sapien. Vivamus sag
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
-            _newsControl.LabelMaxWidth = Width - panelLastNews.Width;
+            _newsControl.LabelWidth = Width - panelLastNews.Width;
         }
     }
 }
