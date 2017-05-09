@@ -61,5 +61,7 @@ Maecenas nisi massa, commodo id magna quis, varius convallis sapien. Vivamus sag
                 if (newsControl != null) newsControl.LabelWidth = Width - panelLastNews.Width - 50;
             }
         }
+
+        private void btnExit_Click(object sender, EventArgs e) => Close();
     }
 }
