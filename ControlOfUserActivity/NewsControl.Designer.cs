@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowPanel = new System.Windows.Forms.Panel();
             this.lblHeader = new ControlOfUserActivity.GrowLabel();
             this.lblBody = new ControlOfUserActivity.GrowLabel();
             this.flowPanel.SuspendLayout();
@@ -41,29 +41,27 @@
             this.flowPanel.Controls.Add(this.lblHeader);
             this.flowPanel.Controls.Add(this.lblBody);
             this.flowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.flowPanel.Location = new System.Drawing.Point(0, 0);
             this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Size = new System.Drawing.Size(123, 38);
+            this.flowPanel.Size = new System.Drawing.Size(58, 39);
             this.flowPanel.TabIndex = 0;
             // 
             // lblHeader
             // 
-            this.lblHeader.Location = new System.Drawing.Point(3, 3);
-            this.lblHeader.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.lblHeader.Location = new System.Drawing.Point(3, 4);
+            this.lblHeader.Margin = new System.Windows.Forms.Padding(3);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(100, 13);
-            this.lblHeader.TabIndex = 0;
+            this.lblHeader.Size = new System.Drawing.Size(52, 13);
+            this.lblHeader.TabIndex = 4;
             this.lblHeader.Text = "lblHeader";
             // 
             // lblBody
             // 
-            this.lblBody.Location = new System.Drawing.Point(3, 22);
-            this.lblBody.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.lblBody.Location = new System.Drawing.Point(3, 23);
+            this.lblBody.Margin = new System.Windows.Forms.Padding(3);
             this.lblBody.Name = "lblBody";
-            this.lblBody.Size = new System.Drawing.Size(100, 13);
-            this.lblBody.TabIndex = 1;
+            this.lblBody.Size = new System.Drawing.Size(41, 13);
+            this.lblBody.TabIndex = 5;
             this.lblBody.Text = "lblBody";
             // 
             // NewsControl
@@ -74,7 +72,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.flowPanel);
             this.Name = "NewsControl";
-            this.Size = new System.Drawing.Size(123, 38);
+            this.Size = new System.Drawing.Size(58, 39);
             this.flowPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -83,7 +81,7 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowPanel;
+        private System.Windows.Forms.Panel flowPanel;
         private GrowLabel lblHeader;
         private GrowLabel lblBody;
     }

@@ -19,7 +19,7 @@ namespace ControlOfUserActivity
             try
             {
                 _mGrowing = true;
-                var sz = new Size(Width, Int32.MaxValue);
+                var sz = new Size(Width, int.MaxValue);
                 sz = TextRenderer.MeasureText(Text, Font, sz, TextFormatFlags.WordBreak);
                 Height = sz.Height;
             }
