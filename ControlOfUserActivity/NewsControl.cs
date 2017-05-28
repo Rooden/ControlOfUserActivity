@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace ControlOfUserActivity
 {
@@ -19,6 +20,7 @@ namespace ControlOfUserActivity
             {
                 if (value < MinimumSize.Width) return;
 
+                Width = value;
                 _labelWidth = value;
                 foreach (Control control in flowPanel.Controls)
                 {
@@ -46,12 +48,20 @@ namespace ControlOfUserActivity
             InitializeComponent();
 
             // ReSharper disable once VirtualMemberCallInConstructor
-            MinimumSize = new System.Drawing.Size(300, 50);
+            MinimumSize = new Size(300, 50);
 
             LabelWidth = _labelWidth;
 
-            new Font().SetExo2Font(lblHeader, 13, System.Drawing.FontStyle.Bold);
-            new Font().SetExo2Font(lblBody, 10);
+            AppFont.SetExo2Font(lblHeader, 13, System.Drawing.FontStyle.Bold);
+            AppFont.SetExo2Font(lblBody, 10);
+
+            lblHeader.ForeColor = Color.Blue;
+            lblHeader.MouseClick += LblHeader_MouseClick;
+        }
+
+        private void LblHeader_MouseClick(object sender, MouseEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Sick!");
         }
     }
 }

@@ -6,16 +6,18 @@ using ControlOfUserActivity.Properties;
 
 namespace ControlOfUserActivity
 {
-    public class Font
+    public class AppFont
     {
         [DllImport("gdi32.dll")]
         private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont,
             IntPtr pdv, [In] ref uint pcFonts);
 
-        private FontFamily _ff;
+        private static FontFamily _ff;
 
-        private void LoadExo2Font()
+        private static void LoadExo2Font()
         {
+            if (_ff != null) return;
+
             var fontArray = Resources.Exo2_Regular;
             var dataLenght = Resources.Exo2_Regular.Length;
 
@@ -32,10 +34,10 @@ namespace ControlOfUserActivity
             _ff = pcf.Families[0];
         }
 
-        public void SetExo2Font(System.Windows.Forms.Control c, float size, FontStyle style = FontStyle.Regular)
+        public static void SetExo2Font(System.Windows.Forms.Control c, float size, FontStyle style = FontStyle.Regular)
         {
             LoadExo2Font();
-            c.Font = new System.Drawing.Font(_ff, size, style);
+            c.Font = new Font(_ff, size, style);
         }
     }
 }

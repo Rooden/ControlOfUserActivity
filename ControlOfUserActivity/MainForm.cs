@@ -10,11 +10,11 @@ namespace ControlOfUserActivity
         {
             InitializeComponent();
 
-            new Font().SetExo2Font(label1, 10, FontStyle.Bold);
-            new Font().SetExo2Font(linkLabel1, 9);
-            new Font().SetExo2Font(linkLabel2, 9);
-            new Font().SetExo2Font(linkLabel3, 9);
-            new Font().SetExo2Font(linkLabel4, 9);
+            AppFont.SetExo2Font(label1, 10, FontStyle.Bold);
+            AppFont.SetExo2Font(linkLabel1, 9);
+            AppFont.SetExo2Font(linkLabel2, 9);
+            AppFont.SetExo2Font(linkLabel3, 9);
+            AppFont.SetExo2Font(linkLabel4, 9);
 
             // ReSharper disable once VirtualMemberCallInConstructor
             MinimumSize = new Size(450, 400);
@@ -55,10 +55,17 @@ Maecenas nisi massa, commodo id magna quis, varius convallis sapien. Vivamus sag
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
-            foreach (Control control in flowNewsPanel.Controls)
+            try
             {
-                var newsControl = control as NewsControl;
-                if (newsControl != null) newsControl.LabelWidth = Width - panelLastNews.Width - 50;
+                foreach (Control control in flowNewsPanel.Controls)
+                {
+                    var newsControl = control as NewsControl;
+                    if (newsControl != null) newsControl.LabelWidth = Width - panelLastNews.Width - 50;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
