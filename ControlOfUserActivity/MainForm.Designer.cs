@@ -238,8 +238,10 @@
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(24, 24);
             this.btnMenu.TabIndex = 7;
-            this.btnMenu.Text = "=";
+            this.btnMenu.Text = "+";
+            this.btnMenu.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // MainForm
             // 
@@ -253,6 +255,7 @@
             this.MinimumSize = new System.Drawing.Size(400, 400);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.panelLastNews.ResumeLayout(false);
             this.panelLastNews.PerformLayout();

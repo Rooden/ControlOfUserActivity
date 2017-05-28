@@ -58,7 +58,6 @@ namespace ControlOfUserActivity
         {
             InitializeComponent();
 
-            // ReSharper disable once VirtualMemberCallInConstructor
             MinimumSize = new Size(300, 50);
 
             LabelWidth = _labelWidth;

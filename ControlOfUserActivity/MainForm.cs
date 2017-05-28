@@ -14,11 +14,19 @@ namespace ControlOfUserActivity
         {
             InitializeComponent();
 
+            #region Setting up font
             AppFont.SetExo2Font(label1, 10, FontStyle.Bold);
             AppFont.SetExo2Font(linkLabel1, 9);
             AppFont.SetExo2Font(linkLabel2, 9);
             AppFont.SetExo2Font(linkLabel3, 9);
             AppFont.SetExo2Font(linkLabel4, 9);
+            AppFont.SetExo2Font(btnBack, 8);
+            AppFont.SetExo2Font(btnForward, 8);
+            AppFont.SetExo2Font(btnMenu, 8);
+            AppFont.SetExo2Font(btnMinus, 8);
+            AppFont.SetExo2Font(btnPlus, 8);
+            AppFont.SetExo2Font(btnExit, 8);
+            #endregion
 
             // ReSharper disable once VirtualMemberCallInConstructor
             MinimumSize = new Size(450, 400);
@@ -71,8 +79,7 @@ Maecenas nisi massa, commodo id magna quis, varius convallis sapien. Vivamus sag
             string bodyText = (flowNewsPanel.Controls[0] as NewsControl).BodyText;
             flowNewsPanel.Controls.Clear();
 
-            //var postControl = new PostControl { HeaderText = headText, BodyText = bodyText };
-            var postControl = new AdminPostControl();
+            var postControl = new PostControl { HeaderText = headText, BodyText = bodyText };
             postControl.LabelWidth = Width - panelLastNews.Width - 50;
             flowNewsPanel.Controls.Add(postControl);
 
@@ -89,10 +96,6 @@ Maecenas nisi massa, commodo id magna quis, varius convallis sapien. Vivamus sag
                         flowControl.LabelWidth = Width - panelLastNews.Width - 50;
                     if (control is AdminPostControl adminPostControl)
                         adminPostControl.LabelHeight = Height - panel1.Height - panelControls.Height - 50;
-
-                    Debug.WriteLine("Height: " + Height);
-                    Debug.WriteLine("panel1.Height: " + panel1.Height);
-                    Debug.WriteLine("panelControls.Height: " + panelControls.Height);
                 }
             }
             catch (Exception ex)
@@ -134,6 +137,28 @@ Maecenas nisi massa, commodo id magna quis, varius convallis sapien. Vivamus sag
 
             flowNewsPanel.Controls.Clear();
             flowNewsPanel.Controls.AddRange(temp.ToArray());
+
+            MainForm_Resize(null, null);
         }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            btnBack.Enabled = true;
+            btnForward.Enabled = false;
+
+            stackControls.Clear();
+            foreach (Control control in flowNewsPanel.Controls)
+                stackControls.Push(control);
+            flowNewsPanel.Controls.Clear();
+
+            var postControl = new AdminPostControl()
+            {
+                LabelWidth = Width - panelLastNews.Width - 50,
+                LabelHeight = Height - panel1.Height - panelControls.Height - 50
+            };
+            flowNewsPanel.Controls.Add(postControl);
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e) => Environment.Exit(0);
     }
 }
