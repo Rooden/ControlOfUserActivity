@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FlowControl.cs" />
     <Compile Include="Font.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -64,6 +65,12 @@
     <Compile Include="NewsControl.Designer.cs">
       <DependentUpon>NewsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="PostControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PostControl.Designer.cs">
+      <DependentUpon>PostControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
@@ -71,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewsControl.resx">
       <DependentUpon>NewsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostControl.resx">
+      <DependentUpon>PostControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

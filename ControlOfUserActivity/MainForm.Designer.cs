@@ -43,8 +43,8 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.flowNewsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMenu = new System.Windows.Forms.Button();
             this.btnNotification = new System.Windows.Forms.Button();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.panelLastNews.SuspendLayout();
             this.panelControls.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -173,6 +173,7 @@
             this.btnBack.TabIndex = 2;
             this.btnBack.Text = "Назад";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnForward
             // 
@@ -184,6 +185,7 @@
             this.btnForward.TabIndex = 1;
             this.btnForward.Text = "Вперёд";
             this.btnForward.UseVisualStyleBackColor = true;
+            this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
             // 
             // btnExit
             // 
@@ -221,15 +223,6 @@
             this.panel1.Size = new System.Drawing.Size(384, 34);
             this.panel1.TabIndex = 12;
             // 
-            // btnMenu
-            // 
-            this.btnMenu.Location = new System.Drawing.Point(10, 3);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(24, 24);
-            this.btnMenu.TabIndex = 7;
-            this.btnMenu.Text = "=";
-            this.btnMenu.UseVisualStyleBackColor = true;
-            // 
             // btnNotification
             // 
             this.btnNotification.Location = new System.Drawing.Point(51, 3);
@@ -238,6 +231,15 @@
             this.btnNotification.TabIndex = 8;
             this.btnNotification.Text = "֍";
             this.btnNotification.UseVisualStyleBackColor = true;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.Location = new System.Drawing.Point(10, 3);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(24, 24);
+            this.btnMenu.TabIndex = 7;
+            this.btnMenu.Text = "=";
+            this.btnMenu.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -250,7 +252,7 @@
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(400, 400);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "MainForm";
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.panelLastNews.ResumeLayout(false);
             this.panelLastNews.PerformLayout();
