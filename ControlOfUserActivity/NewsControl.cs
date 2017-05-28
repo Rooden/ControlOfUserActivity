@@ -27,8 +27,8 @@ namespace ControlOfUserActivity
                 _labelWidth = value;
                 foreach (Control control in flowPanel.Controls)
                 {
-                    var label = control as Label;
-                    if (label != null) label.Width = _labelWidth;
+                    if (control is Label label)
+                        label.Width = _labelWidth;
                 }
             }
         }
@@ -63,7 +63,7 @@ namespace ControlOfUserActivity
 
             LabelWidth = _labelWidth;
 
-            AppFont.SetExo2Font(lblHeader, 13, System.Drawing.FontStyle.Bold);
+            AppFont.SetExo2Font(lblHeader, 13, FontStyle.Bold);
             AppFont.SetExo2Font(lblBody, 10);
 
             lblHeader.ForeColor = Color.Blue;

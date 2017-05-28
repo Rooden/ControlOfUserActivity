@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -70,7 +71,8 @@ Maecenas nisi massa, commodo id magna quis, varius convallis sapien. Vivamus sag
             string bodyText = (flowNewsPanel.Controls[0] as NewsControl).BodyText;
             flowNewsPanel.Controls.Clear();
 
-            var postControl = new PostControl { HeaderText = headText, BodyText = bodyText };
+            //var postControl = new PostControl { HeaderText = headText, BodyText = bodyText };
+            var postControl = new AdminPostControl();
             postControl.LabelWidth = Width - panelLastNews.Width - 50;
             flowNewsPanel.Controls.Add(postControl);
 
@@ -83,8 +85,14 @@ Maecenas nisi massa, commodo id magna quis, varius convallis sapien. Vivamus sag
             {
                 foreach (Control control in flowNewsPanel.Controls)
                 {
-                    var flowControl = control as FlowControl;
-                    if (flowControl != null) flowControl.LabelWidth = Width - panelLastNews.Width - 50;
+                    if (control is FlowControl flowControl)
+                        flowControl.LabelWidth = Width - panelLastNews.Width - 50;
+                    if (control is AdminPostControl adminPostControl)
+                        adminPostControl.LabelHeight = Height - panel1.Height - panelControls.Height - 50;
+
+                    Debug.WriteLine("Height: " + Height);
+                    Debug.WriteLine("panel1.Height: " + panel1.Height);
+                    Debug.WriteLine("panelControls.Height: " + panelControls.Height);
                 }
             }
             catch (Exception ex)

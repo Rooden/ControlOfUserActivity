@@ -22,8 +22,8 @@ namespace ControlOfUserActivity
                 _labelWidth = value;
                 foreach (Control control in flowPanel.Controls)
                 {
-                    var label = control as Label;
-                    if (label != null) label.Width = _labelWidth;
+                    if (control is Label label)
+                        label.Width = _labelWidth;
                 }
                 panel1.Width = value;
 
@@ -45,16 +45,12 @@ namespace ControlOfUserActivity
         {
             InitializeComponent();
 
-            // ReSharper disable once VirtualMemberCallInConstructor
             MinimumSize = new Size(300, 50);
 
             LabelWidth = _labelWidth;
 
             AppFont.SetExo2Font(lblHeader, 13, FontStyle.Bold);
             AppFont.SetExo2Font(lblBody, 10);
-
-            //lblHeader.ForeColor = Color.Blue;
-            //lblHeader.MouseClick += LblHeader_MouseClick;
         }
     }
 }
