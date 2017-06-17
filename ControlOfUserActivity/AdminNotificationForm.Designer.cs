@@ -1,13 +1,13 @@
 ﻿namespace ControlOfUserActivity
 {
-    partial class AdminPostControl
+    partial class AdminNotificationForm
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,90 +20,77 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblName = new ControlOfUserActivity.GrowLabel();
             this.txtHeader = new ControlOfUserActivity.WaterMarkTextBox();
             this.txtBody = new ControlOfUserActivity.WaterMarkTextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.Controls.Add(this.lblName);
-            this.flowLayoutPanel1.Controls.Add(this.txtHeader);
-            this.flowLayoutPanel1.Controls.Add(this.txtBody);
-            this.flowLayoutPanel1.Controls.Add(this.btnSave);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(106, 94);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(3, 0);
+            this.lblName.Location = new System.Drawing.Point(9, 9);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(93, 13);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Создание статьи";
+            this.lblName.Size = new System.Drawing.Size(116, 13);
+            this.lblName.TabIndex = 6;
+            this.lblName.Text = "Создание сообщения";
             // 
             // txtHeader
             // 
+            this.txtHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtHeader.Location = new System.Drawing.Point(3, 16);
+            this.txtHeader.Location = new System.Drawing.Point(12, 30);
             this.txtHeader.Name = "txtHeader";
-            this.txtHeader.Size = new System.Drawing.Size(100, 20);
-            this.txtHeader.TabIndex = 3;
+            this.txtHeader.Size = new System.Drawing.Size(260, 20);
+            this.txtHeader.TabIndex = 7;
             this.txtHeader.WaterMarkColor = System.Drawing.Color.Gray;
             this.txtHeader.WaterMarkText = "Заголовок";
             // 
             // txtBody
             // 
-            this.txtBody.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtBody.Location = new System.Drawing.Point(3, 42);
+            this.txtBody.Location = new System.Drawing.Point(12, 56);
             this.txtBody.Multiline = true;
             this.txtBody.Name = "txtBody";
-            this.txtBody.Size = new System.Drawing.Size(100, 20);
-            this.txtBody.TabIndex = 4;
+            this.txtBody.Size = new System.Drawing.Size(260, 164);
+            this.txtBody.TabIndex = 8;
             this.txtBody.WaterMarkColor = System.Drawing.Color.Gray;
-            this.txtBody.WaterMarkText = "Текст статьи";
+            this.txtBody.WaterMarkText = "Текст сообщения";
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(28, 68);
+            this.btnSave.Location = new System.Drawing.Point(197, 226);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 5;
+            this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Сохранить";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // AdminPostControl
+            // AdminNotificationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "AdminPostControl";
-            this.Size = new System.Drawing.Size(106, 94);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.txtHeader);
+            this.Controls.Add(this.txtBody);
+            this.Controls.Add(this.btnSave);
+            this.Name = "AdminNotificationForm";
+            this.Text = "AdminNotificationForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,7 +98,6 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private GrowLabel lblName;
         private WaterMarkTextBox txtHeader;
         private WaterMarkTextBox txtBody;

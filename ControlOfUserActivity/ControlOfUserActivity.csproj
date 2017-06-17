@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,12 +51,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminNotificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminNotificationForm.Designer.cs">
+      <DependentUpon>AdminNotificationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPostControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AdminPostControl.Designer.cs">
       <DependentUpon>AdminPostControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Database\BlogPerUserState.cs" />
+    <Compile Include="Database\BlogPost.cs" />
+    <Compile Include="Database\Messages.cs" />
+    <Compile Include="Database\User.cs" />
+    <Compile Include="Database\UserActivity.cs" />
     <Compile Include="FlowControl.cs" />
     <Compile Include="Font.cs" />
     <Compile Include="LoginForm.cs">
@@ -71,11 +86,23 @@
     <Compile Include="GrowLabel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="MessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MessageControl.Designer.cs">
+      <DependentUpon>MessageControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="NewsControl.Designer.cs">
       <DependentUpon>NewsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationForm.Designer.cs">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PostControl.cs">
       <SubType>UserControl</SubType>
@@ -85,9 +112,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatingPageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RatingPageControl.Designer.cs">
+      <DependentUpon>RatingPageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserListControl.Designer.cs">
+      <DependentUpon>UserListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanelControl.Designer.cs">
+      <DependentUpon>UserPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserRatingControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRatingControl.Designer.cs">
+      <DependentUpon>UserRatingControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="WaterMarkTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="AdminNotificationForm.resx">
+      <DependentUpon>AdminNotificationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPostControl.resx">
       <DependentUpon>AdminPostControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,8 +151,14 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MessageControl.resx">
+      <DependentUpon>MessageControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewsControl.resx">
       <DependentUpon>NewsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationForm.resx">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PostControl.resx">
       <DependentUpon>PostControl.cs</DependentUpon>
@@ -113,6 +173,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RatingPageControl.resx">
+      <DependentUpon>RatingPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserListControl.resx">
+      <DependentUpon>UserListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanelControl.resx">
+      <DependentUpon>UserPanelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRatingControl.resx">
+      <DependentUpon>UserRatingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

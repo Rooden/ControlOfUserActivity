@@ -1,6 +1,6 @@
 ﻿namespace ControlOfUserActivity
 {
-    partial class PostControl
+    partial class MessageControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,10 +31,7 @@
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lblHeader = new ControlOfUserActivity.GrowLabel();
             this.lblBody = new ControlOfUserActivity.GrowLabel();
-            this.btnAccept = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.flowPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowPanel
@@ -48,7 +45,7 @@
             this.flowPanel.Location = new System.Drawing.Point(0, 0);
             this.flowPanel.Name = "flowPanel";
             this.flowPanel.Size = new System.Drawing.Size(49, 26);
-            this.flowPanel.TabIndex = 3;
+            this.flowPanel.TabIndex = 8;
             // 
             // lblHeader
             // 
@@ -66,40 +63,17 @@
             this.lblBody.TabIndex = 1;
             this.lblBody.Text = "lblBoby";
             // 
-            // btnAccept
-            // 
-            this.btnAccept.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAccept.Location = new System.Drawing.Point(-18, 4);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(84, 23);
-            this.btnAccept.TabIndex = 4;
-            this.btnAccept.Text = "Ознакомлен";
-            this.btnAccept.UseVisualStyleBackColor = true;
-            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.Controls.Add(this.btnAccept);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 26);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(49, 30);
-            this.panel1.TabIndex = 5;
-            // 
-            // PostControl
+            // MessageControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.flowPanel);
-            this.Controls.Add(this.panel1);
-            this.Name = "PostControl";
-            this.Size = new System.Drawing.Size(49, 56);
+            this.Name = "MessageControl";
+            this.Size = new System.Drawing.Size(49, 26);
             this.flowPanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,7 +84,5 @@
         private System.Windows.Forms.FlowLayoutPanel flowPanel;
         private GrowLabel lblHeader;
         private GrowLabel lblBody;
-        private System.Windows.Forms.Button btnAccept;
-        private System.Windows.Forms.Panel panel1;
     }
 }

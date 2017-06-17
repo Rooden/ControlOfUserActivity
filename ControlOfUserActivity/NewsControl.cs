@@ -11,7 +11,8 @@ namespace ControlOfUserActivity
     {
         private int _labelWidth = 300;
 
-        public event EventHandler OnNewsOpen;
+        public delegate void OnNewsOpenHandler(int id);
+        public event OnNewsOpenHandler OnNewsOpen;
 
         /// <summary>
         /// Set label width. Applies only if value grater than form minimum width.
@@ -32,6 +33,8 @@ namespace ControlOfUserActivity
                 }
             }
         }
+
+        public int BlogPostId { get; set; }
 
         /// <summary>
         /// Set <see cref="lblHeader"/> text.
@@ -66,12 +69,12 @@ namespace ControlOfUserActivity
             AppFont.SetExo2Font(lblBody, 10);
 
             lblHeader.ForeColor = Color.Blue;
-            lblHeader.MouseClick += LblHeader_MouseClick;
+            lblHeader.MouseClick += lblHeader_MouseClick;
         }
 
-        private void LblHeader_MouseClick(object sender, MouseEventArgs e)
+        private void lblHeader_MouseClick(object sender, MouseEventArgs e)
         {
-            OnNewsOpen?.Invoke(sender, e);
+            OnNewsOpen?.Invoke(BlogPostId);
         }
     }
 }

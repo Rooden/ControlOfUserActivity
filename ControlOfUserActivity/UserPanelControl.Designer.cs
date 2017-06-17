@@ -1,6 +1,6 @@
 ﻿namespace ControlOfUserActivity
 {
-    partial class PostControl
+    partial class UserPanelControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblHeader = new ControlOfUserActivity.GrowLabel();
-            this.lblBody = new ControlOfUserActivity.GrowLabel();
-            this.btnAccept = new System.Windows.Forms.Button();
+            this.lblNickname = new ControlOfUserActivity.GrowLabel();
+            this.lblRealFullName = new ControlOfUserActivity.GrowLabel();
+            this.btnOpen = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -41,54 +41,54 @@
             // 
             this.flowPanel.AutoSize = true;
             this.flowPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowPanel.Controls.Add(this.lblHeader);
-            this.flowPanel.Controls.Add(this.lblBody);
+            this.flowPanel.Controls.Add(this.lblNickname);
+            this.flowPanel.Controls.Add(this.lblRealFullName);
             this.flowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowPanel.Location = new System.Drawing.Point(0, 0);
             this.flowPanel.Name = "flowPanel";
             this.flowPanel.Size = new System.Drawing.Size(49, 26);
-            this.flowPanel.TabIndex = 3;
+            this.flowPanel.TabIndex = 6;
             // 
             // lblHeader
             // 
-            this.lblHeader.Location = new System.Drawing.Point(3, 0);
-            this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(43, 13);
-            this.lblHeader.TabIndex = 0;
-            this.lblHeader.Text = "lblHeader";
+            this.lblNickname.Location = new System.Drawing.Point(3, 0);
+            this.lblNickname.Name = "lblHeader";
+            this.lblNickname.Size = new System.Drawing.Size(43, 13);
+            this.lblNickname.TabIndex = 0;
+            this.lblNickname.Text = "lblHeader";
             // 
             // lblBody
             // 
-            this.lblBody.Location = new System.Drawing.Point(3, 13);
-            this.lblBody.Name = "lblBody";
-            this.lblBody.Size = new System.Drawing.Size(41, 13);
-            this.lblBody.TabIndex = 1;
-            this.lblBody.Text = "lblBoby";
+            this.lblRealFullName.Location = new System.Drawing.Point(3, 13);
+            this.lblRealFullName.Name = "lblBody";
+            this.lblRealFullName.Size = new System.Drawing.Size(41, 13);
+            this.lblRealFullName.TabIndex = 1;
+            this.lblRealFullName.Text = "lblBoby";
             // 
-            // btnAccept
+            // btnOpen
             // 
-            this.btnAccept.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAccept.Location = new System.Drawing.Point(-18, 4);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(84, 23);
-            this.btnAccept.TabIndex = 4;
-            this.btnAccept.Text = "Ознакомлен";
-            this.btnAccept.UseVisualStyleBackColor = true;
-            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
+            this.btnOpen.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnOpen.Location = new System.Drawing.Point(-18, 4);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(84, 23);
+            this.btnOpen.TabIndex = 4;
+            this.btnOpen.Text = "Открыть";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // panel1
             // 
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.Controls.Add(this.btnAccept);
+            this.panel1.Controls.Add(this.btnOpen);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 26);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(49, 30);
-            this.panel1.TabIndex = 5;
+            this.panel1.TabIndex = 7;
             // 
-            // PostControl
+            // UserPanelControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -96,7 +96,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.flowPanel);
             this.Controls.Add(this.panel1);
-            this.Name = "PostControl";
+            this.Name = "UserPanelControl";
             this.Size = new System.Drawing.Size(49, 56);
             this.flowPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -108,9 +108,9 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowPanel;
-        private GrowLabel lblHeader;
-        private GrowLabel lblBody;
-        private System.Windows.Forms.Button btnAccept;
+        private GrowLabel lblNickname;
+        private GrowLabel lblRealFullName;
+        private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Panel panel1;
     }
 }

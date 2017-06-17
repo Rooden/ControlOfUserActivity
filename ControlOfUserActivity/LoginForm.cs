@@ -8,6 +8,8 @@ namespace ControlOfUserActivity
         public LoginForm()
         {
             InitializeComponent();
+
+            Constants.UserId = 1;
             
             #region Setting up font
             AppFont.SetExo2Font(lblIP, 8);

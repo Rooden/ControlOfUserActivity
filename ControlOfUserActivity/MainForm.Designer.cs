@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Создать сообщение");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Просмотреть сообщения");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Создать новость");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Список пользователей");
+            this.lblLastNews1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.lblLastNews2 = new System.Windows.Forms.LinkLabel();
+            this.lblLastNews4 = new System.Windows.Forms.LinkLabel();
+            this.lblLastNews3 = new System.Windows.Forms.LinkLabel();
             this.panelLastNews = new System.Windows.Forms.Panel();
             this.panelControls = new System.Windows.Forms.Panel();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -43,23 +47,24 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.flowNewsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.btnNotification = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
+            this.trvNotification = new System.Windows.Forms.TreeView();
+            this.trvMenu = new System.Windows.Forms.TreeView();
             this.panelLastNews.SuspendLayout();
             this.panelControls.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // linkLabel1
+            // lblLastNews1
             // 
-            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(18, 46);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
+            this.lblLastNews1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLastNews1.AutoSize = true;
+            this.lblLastNews1.Location = new System.Drawing.Point(18, 46);
+            this.lblLastNews1.Name = "lblLastNews1";
+            this.lblLastNews1.Size = new System.Drawing.Size(0, 13);
+            this.lblLastNews1.TabIndex = 4;
             // 
             // label1
             // 
@@ -72,47 +77,41 @@
             this.label1.Text = "Последние \r\nновости";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // linkLabel2
+            // lblLastNews2
             // 
-            this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(18, 70);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel2.TabIndex = 6;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "linkLabel2";
+            this.lblLastNews2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLastNews2.AutoSize = true;
+            this.lblLastNews2.Location = new System.Drawing.Point(18, 70);
+            this.lblLastNews2.Name = "lblLastNews2";
+            this.lblLastNews2.Size = new System.Drawing.Size(0, 13);
+            this.lblLastNews2.TabIndex = 6;
             // 
-            // linkLabel3
+            // lblLastNews4
             // 
-            this.linkLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(18, 117);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel3.TabIndex = 7;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "linkLabel3";
+            this.lblLastNews4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLastNews4.AutoSize = true;
+            this.lblLastNews4.Location = new System.Drawing.Point(18, 117);
+            this.lblLastNews4.Name = "lblLastNews4";
+            this.lblLastNews4.Size = new System.Drawing.Size(0, 13);
+            this.lblLastNews4.TabIndex = 7;
             // 
-            // linkLabel4
+            // lblLastNews3
             // 
-            this.linkLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(18, 94);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel4.TabIndex = 8;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "linkLabel4";
+            this.lblLastNews3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLastNews3.AutoSize = true;
+            this.lblLastNews3.Location = new System.Drawing.Point(18, 94);
+            this.lblLastNews3.Name = "lblLastNews3";
+            this.lblLastNews3.Size = new System.Drawing.Size(0, 13);
+            this.lblLastNews3.TabIndex = 8;
             // 
             // panelLastNews
             // 
             this.panelLastNews.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelLastNews.Controls.Add(this.label1);
-            this.panelLastNews.Controls.Add(this.linkLabel4);
-            this.panelLastNews.Controls.Add(this.linkLabel1);
-            this.panelLastNews.Controls.Add(this.linkLabel3);
-            this.panelLastNews.Controls.Add(this.linkLabel2);
+            this.panelLastNews.Controls.Add(this.lblLastNews3);
+            this.panelLastNews.Controls.Add(this.lblLastNews1);
+            this.panelLastNews.Controls.Add(this.lblLastNews4);
+            this.panelLastNews.Controls.Add(this.lblLastNews2);
             this.panelLastNews.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLastNews.Location = new System.Drawing.Point(0, 34);
             this.panelLastNews.Name = "panelLastNews";
@@ -215,6 +214,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.btnNotification);
             this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -223,40 +223,93 @@
             this.panel1.Size = new System.Drawing.Size(384, 34);
             this.panel1.TabIndex = 12;
             // 
+            // btnHome
+            // 
+            this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHome.Location = new System.Drawing.Point(308, 4);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(62, 24);
+            this.btnHome.TabIndex = 9;
+            this.btnHome.Text = "Главная";
+            this.btnHome.UseVisualStyleBackColor = true;
+            // 
             // btnNotification
             // 
-            this.btnNotification.Location = new System.Drawing.Point(51, 3);
+            this.btnNotification.Location = new System.Drawing.Point(10, 3);
             this.btnNotification.Name = "btnNotification";
             this.btnNotification.Size = new System.Drawing.Size(24, 24);
             this.btnNotification.TabIndex = 8;
             this.btnNotification.Text = "֍";
             this.btnNotification.UseVisualStyleBackColor = true;
+            this.btnNotification.Click += new System.EventHandler(this.btnNotification_Click);
             // 
             // btnMenu
             // 
-            this.btnMenu.Location = new System.Drawing.Point(10, 3);
+            this.btnMenu.Location = new System.Drawing.Point(50, 3);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(24, 24);
             this.btnMenu.TabIndex = 7;
-            this.btnMenu.Text = "+";
+            this.btnMenu.Text = "=";
             this.btnMenu.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // trvNotification
+            // 
+            this.trvNotification.Location = new System.Drawing.Point(53, 30);
+            this.trvNotification.Name = "trvNotification";
+            treeNode1.Name = "Create";
+            treeNode1.Tag = "Create";
+            treeNode1.Text = "Создать сообщение";
+            treeNode2.Name = "Open";
+            treeNode2.Tag = "Open";
+            treeNode2.Text = "Просмотреть сообщения";
+            this.trvNotification.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            this.trvNotification.Size = new System.Drawing.Size(65535, 0);
+            this.trvNotification.TabIndex = 14;
+            this.trvNotification.Visible = false;
+            this.trvNotification.DoubleClick += new System.EventHandler(this.trvNotification_DoubleClick);
+            this.trvNotification.Leave += new System.EventHandler(this.trvNotification_Leave);
+            // 
+            // trvMenu
+            // 
+            this.trvMenu.Location = new System.Drawing.Point(13, 30);
+            this.trvMenu.Name = "trvMenu";
+            treeNode3.Name = "CreateNews";
+            treeNode3.Tag = "CreateNews";
+            treeNode3.Text = "Создать новость";
+            treeNode4.Name = "UsersList";
+            treeNode4.Tag = "UsersList";
+            treeNode4.Text = "Список пользователей";
+            this.trvMenu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode3,
+            treeNode4});
+            this.trvMenu.Size = new System.Drawing.Size(65535, 0);
+            this.trvMenu.TabIndex = 13;
+            this.trvMenu.Visible = false;
+            this.trvMenu.DoubleClick += new System.EventHandler(this.trvMenu_DoubleClick);
+            this.trvMenu.Leave += new System.EventHandler(this.trvMenu_Leave);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
+            this.Controls.Add(this.trvMenu);
+            this.Controls.Add(this.trvNotification);
             this.Controls.Add(this.flowNewsPanel);
             this.Controls.Add(this.panelLastNews);
             this.Controls.Add(this.panelControls);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(400, 400);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MainForm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-            this.Resize += new System.EventHandler(this.MainForm_Resize);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainForm_FormClosing);
+            this.Load += new System.EventHandler(this.mainForm_Load);
+            this.Resize += new System.EventHandler(this.mainForm_Resize);
             this.panelLastNews.ResumeLayout(false);
             this.panelLastNews.PerformLayout();
             this.panelControls.ResumeLayout(false);
@@ -267,11 +320,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lblLastNews1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.LinkLabel lblLastNews2;
+        private System.Windows.Forms.LinkLabel lblLastNews4;
+        private System.Windows.Forms.LinkLabel lblLastNews3;
         private System.Windows.Forms.Panel panelLastNews;
         private System.Windows.Forms.Panel panelControls;
         private System.Windows.Forms.FlowLayoutPanel flowNewsPanel;
@@ -284,6 +337,9 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnNotification;
+        private System.Windows.Forms.TreeView trvMenu;
+        private System.Windows.Forms.TreeView trvNotification;
+        private System.Windows.Forms.Button btnHome;
     }
 }
 
