@@ -47,7 +47,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "NotificationForm";
-            this.Text = "NotificationForm";
+            this.Text = "Уведомления";
             this.Load += new System.EventHandler(this.notificationForm_Load);
             this.Resize += new System.EventHandler(this.NotificationForm_Resize);
             this.ResumeLayout(false);

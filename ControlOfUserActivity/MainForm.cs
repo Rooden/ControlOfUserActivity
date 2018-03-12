@@ -20,11 +20,6 @@ namespace ControlOfUserActivity
             InitializeComponent();
 
             #region Setting up font
-            AppFont.SetExo2Font(label1, 10, FontStyle.Bold);
-            AppFont.SetExo2Font(lblLastNews1, 9);
-            AppFont.SetExo2Font(lblLastNews2, 9);
-            AppFont.SetExo2Font(lblLastNews4, 9);
-            AppFont.SetExo2Font(lblLastNews3, 9);
             AppFont.SetExo2Font(btnBack, 8);
             AppFont.SetExo2Font(btnForward, 8);
             AppFont.SetExo2Font(btnMenu, 8);
@@ -54,8 +49,10 @@ namespace ControlOfUserActivity
             string bodyText = (flowNewsPanel.Controls[0] as NewsControl).BodyText;
             flowNewsPanel.Controls.Clear();
 
+            Text = headText;
+
             var postControl = new PostControl { BlogPostId = id, HeaderText = headText, BodyText = bodyText };
-            postControl.LabelWidth = Width - panelLastNews.Width - 50;
+            postControl.LabelWidth = Width - 50;
             flowNewsPanel.Controls.Add(postControl);
 
             flowNewsPanel.Update();
@@ -68,7 +65,7 @@ namespace ControlOfUserActivity
                 foreach (Control control in flowNewsPanel.Controls)
                 {
                     if (control is FlowControl flowControl)
-                        flowControl.LabelWidth = Width - panelLastNews.Width - 50;
+                        flowControl.LabelWidth = Width - 50;
                     if (control is AdminPostControl adminPostControl)
                         adminPostControl.LabelHeight = Height - panel1.Height - panelControls.Height - 50;
                 }
@@ -154,6 +151,7 @@ namespace ControlOfUserActivity
             switch (trvMenu.SelectedNode.Name)
             {
                 case "CreateNews":
+                    Text = "Создание новости";
                     btnBack.Enabled = true;
                     btnForward.Enabled = false;
 
@@ -164,13 +162,14 @@ namespace ControlOfUserActivity
 
                     var postControl = new AdminPostControl()
                     {
-                        LabelWidth = Width - panelLastNews.Width - 50,
+                        LabelWidth = Width - 50,
                         LabelHeight = Height - panel1.Height - panelControls.Height - 50
                     };
                     flowNewsPanel.Controls.Add(postControl);
                     break;
 
                 case "UsersList":
+                    Text = "Список пользователей";
                     btnBack.Enabled = true;
                     btnForward.Enabled = false;
 
@@ -181,7 +180,7 @@ namespace ControlOfUserActivity
 
                     var userListControl = new UserListControl()
                     {
-                        LabelWidth = Width - panelLastNews.Width - 50
+                        LabelWidth = Width - 50
                     };
                     flowNewsPanel.Controls.Add(userListControl);
                     break;
@@ -236,6 +235,51 @@ namespace ControlOfUserActivity
 
         private void mainForm_Load(object sender, EventArgs e)
         {
+            if (!loadDataFromDatabase())
+            {
+                #region Test
+                var newsControl = new NewsControl
+                {
+                    BorderStyle = BorderStyle.FixedSingle,
+                    HeaderText = @"Lorem Ipsum",
+                    BodyText = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum tempus scelerisque. Nulla viverra tempor erat ut laoreet. 
+    Aenean et massa efficitur, lacinia lectus sed, porta lorem. 
+    Sed venenatis id lectus et posuere. Phasellus lacinia leo a orci efficitur, at fermentum justo commodo. 
+    Maecenas nisi massa, commodo id magna quis, varius convallis sapien. Vivamus sagittis urna orci, vitae ornare urna feugiat ac."
+                };
+                newsControl.OnNewsOpen += newsControl_OnNewsOpen;
+                flowNewsPanel.Controls.Add(newsControl);
+
+                var newsControl2 = new NewsControl
+                {
+                    BorderStyle = BorderStyle.FixedSingle,
+                    HeaderText = @"Lorem Ipsum",
+                    BodyText = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum tempus scelerisque. Nulla viverra tempor erat ut laoreet. 
+    Aenean et massa efficitur, lacinia lectus sed, porta lorem. 
+    Sed venenatis id lectus et posuere. Phasellus lacinia leo a orci efficitur, at fermentum justo commodo. 
+    Maecenas nisi massa, commodo id magna quis, varius convallis sapien. Vivamus sagittis urna orci, vitae ornare urna feugiat ac."
+                };
+                flowNewsPanel.Controls.Add(newsControl2);
+
+                var newsControl3 = new NewsControl
+                {
+                    BorderStyle = BorderStyle.FixedSingle,
+                    HeaderText = @"Lorem Ipsum",
+                    BodyText = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum tempus scelerisque. Nulla viverra tempor erat ut laoreet. 
+    Aenean et massa efficitur, lacinia lectus sed, porta lorem. 
+    Sed venenatis id lectus et posuere. Phasellus lacinia leo a orci efficitur, at fermentum justo commodo. 
+    Maecenas nisi massa, commodo id magna quis, varius convallis sapien. Vivamus sagittis urna orci, vitae ornare urna feugiat ac."
+                };
+                flowNewsPanel.Controls.Add(newsControl3);
+                #endregion
+            }
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Text = "Главная";
+            flowNewsPanel.Controls.Clear();
+
             if (!loadDataFromDatabase())
             {
                 #region Test

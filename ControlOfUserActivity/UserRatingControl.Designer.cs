@@ -98,6 +98,7 @@
             this.MaximumSize = new System.Drawing.Size(330, 264);
             this.MinimumSize = new System.Drawing.Size(330, 264);
             this.Name = "UserRatingControl";
+            this.Text = "Рейтинг пользователя";
             this.Load += new System.EventHandler(this.userRatingControl_Load);
             this.panel1.ResumeLayout(false);
             this.tcRating.ResumeLayout(false);

@@ -37,6 +37,7 @@
             this.txtIP = new ControlOfUserActivity.WaterMarkTextBox();
             this.txtLogin = new ControlOfUserActivity.WaterMarkTextBox();
             this.txtPassword = new ControlOfUserActivity.WaterMarkTextBox();
+            this.btnRegistration = new System.Windows.Forms.Button();
             this.gbLoginForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,20 +70,20 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(24, 129);
+            this.btnExit.Location = new System.Drawing.Point(12, 147);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 6;
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Выход";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnAccept
             // 
-            this.btnAccept.Location = new System.Drawing.Point(149, 129);
+            this.btnAccept.Location = new System.Drawing.Point(137, 147);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(75, 23);
-            this.btnAccept.TabIndex = 7;
+            this.btnAccept.TabIndex = 3;
             this.btnAccept.Text = "Вход";
             this.btnAccept.UseVisualStyleBackColor = true;
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
@@ -95,7 +96,7 @@
             this.gbLoginForm.Controls.Add(this.lblIP);
             this.gbLoginForm.Controls.Add(this.lblPassword);
             this.gbLoginForm.Controls.Add(this.lblLogin);
-            this.gbLoginForm.Location = new System.Drawing.Point(24, 12);
+            this.gbLoginForm.Location = new System.Drawing.Point(12, 41);
             this.gbLoginForm.Name = "gbLoginForm";
             this.gbLoginForm.Size = new System.Drawing.Size(200, 100);
             this.gbLoginForm.TabIndex = 8;
@@ -108,7 +109,7 @@
             this.txtIP.Location = new System.Drawing.Point(79, 19);
             this.txtIP.Name = "txtIP";
             this.txtIP.Size = new System.Drawing.Size(100, 20);
-            this.txtIP.TabIndex = 5;
+            this.txtIP.TabIndex = 0;
             this.txtIP.WaterMarkColor = System.Drawing.Color.Gray;
             this.txtIP.WaterMarkText = "127.0.0.1";
             // 
@@ -118,7 +119,7 @@
             this.txtLogin.Location = new System.Drawing.Point(79, 45);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(100, 20);
-            this.txtLogin.TabIndex = 4;
+            this.txtLogin.TabIndex = 1;
             this.txtLogin.WaterMarkColor = System.Drawing.Color.Gray;
             this.txtLogin.WaterMarkText = "Ivan";
             // 
@@ -129,21 +130,34 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.WaterMarkColor = System.Drawing.Color.Gray;
             this.txtPassword.WaterMarkText = "********";
+            // 
+            // btnRegistration
+            // 
+            this.btnRegistration.Location = new System.Drawing.Point(125, 12);
+            this.btnRegistration.Name = "btnRegistration";
+            this.btnRegistration.Size = new System.Drawing.Size(87, 23);
+            this.btnRegistration.TabIndex = 9;
+            this.btnRegistration.Text = "Регистрация";
+            this.btnRegistration.UseVisualStyleBackColor = true;
+            this.btnRegistration.Click += new System.EventHandler(this.btnRegistration_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(248, 165);
+            this.ClientSize = new System.Drawing.Size(224, 188);
+            this.Controls.Add(this.btnRegistration);
             this.Controls.Add(this.gbLoginForm);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.btnExit);
+            this.MaximumSize = new System.Drawing.Size(240, 227);
+            this.MinimumSize = new System.Drawing.Size(240, 227);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoginForm";
+            this.Text = "Вход";
             this.gbLoginForm.ResumeLayout(false);
             this.gbLoginForm.PerformLayout();
             this.ResumeLayout(false);
@@ -161,5 +175,6 @@
         private WaterMarkTextBox txtIP;
         private WaterMarkTextBox txtLogin;
         private WaterMarkTextBox txtPassword;
+        private System.Windows.Forms.Button btnRegistration;
     }
 }

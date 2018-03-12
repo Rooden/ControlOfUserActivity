@@ -51,7 +51,7 @@ namespace ControlOfUserActivity
         {
             if (connection == null) return false;
 
-            var userList = connection.Query<User>($"SELECT * FROM Users").AsList();
+            var userList = connection.Query<Users>($"SELECT * FROM Users").AsList();
             foreach (var user in userList)
             {
                 var userpanelControl = new UserPanelControl

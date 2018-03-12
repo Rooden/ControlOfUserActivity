@@ -28,16 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Создать сообщение");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Просмотреть сообщения");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Создать новость");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Список пользователей");
-            this.lblLastNews1 = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblLastNews2 = new System.Windows.Forms.LinkLabel();
-            this.lblLastNews4 = new System.Windows.Forms.LinkLabel();
-            this.lblLastNews3 = new System.Windows.Forms.LinkLabel();
-            this.panelLastNews = new System.Windows.Forms.Panel();
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Создать сообщение");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Просмотреть сообщения");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Создать новость");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Список пользователей");
             this.panelControls = new System.Windows.Forms.Panel();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.btnMinus = new System.Windows.Forms.Button();
@@ -52,71 +46,9 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.trvNotification = new System.Windows.Forms.TreeView();
             this.trvMenu = new System.Windows.Forms.TreeView();
-            this.panelLastNews.SuspendLayout();
             this.panelControls.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblLastNews1
-            // 
-            this.lblLastNews1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLastNews1.AutoSize = true;
-            this.lblLastNews1.Location = new System.Drawing.Point(18, 46);
-            this.lblLastNews1.Name = "lblLastNews1";
-            this.lblLastNews1.Size = new System.Drawing.Size(0, 13);
-            this.lblLastNews1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 26);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Последние \r\nновости";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblLastNews2
-            // 
-            this.lblLastNews2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLastNews2.AutoSize = true;
-            this.lblLastNews2.Location = new System.Drawing.Point(18, 70);
-            this.lblLastNews2.Name = "lblLastNews2";
-            this.lblLastNews2.Size = new System.Drawing.Size(0, 13);
-            this.lblLastNews2.TabIndex = 6;
-            // 
-            // lblLastNews4
-            // 
-            this.lblLastNews4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLastNews4.AutoSize = true;
-            this.lblLastNews4.Location = new System.Drawing.Point(18, 117);
-            this.lblLastNews4.Name = "lblLastNews4";
-            this.lblLastNews4.Size = new System.Drawing.Size(0, 13);
-            this.lblLastNews4.TabIndex = 7;
-            // 
-            // lblLastNews3
-            // 
-            this.lblLastNews3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLastNews3.AutoSize = true;
-            this.lblLastNews3.Location = new System.Drawing.Point(18, 94);
-            this.lblLastNews3.Name = "lblLastNews3";
-            this.lblLastNews3.Size = new System.Drawing.Size(0, 13);
-            this.lblLastNews3.TabIndex = 8;
-            // 
-            // panelLastNews
-            // 
-            this.panelLastNews.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelLastNews.Controls.Add(this.label1);
-            this.panelLastNews.Controls.Add(this.lblLastNews3);
-            this.panelLastNews.Controls.Add(this.lblLastNews1);
-            this.panelLastNews.Controls.Add(this.lblLastNews4);
-            this.panelLastNews.Controls.Add(this.lblLastNews2);
-            this.panelLastNews.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLastNews.Location = new System.Drawing.Point(0, 34);
-            this.panelLastNews.Name = "panelLastNews";
-            this.panelLastNews.Size = new System.Drawing.Size(100, 287);
-            this.panelLastNews.TabIndex = 9;
             // 
             // panelControls
             // 
@@ -141,6 +73,7 @@
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(56, 20);
             this.maskedTextBox1.TabIndex = 6;
+            this.maskedTextBox1.Visible = false;
             // 
             // btnMinus
             // 
@@ -151,6 +84,7 @@
             this.btnMinus.TabIndex = 4;
             this.btnMinus.Text = "<";
             this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.Visible = false;
             // 
             // btnPlus
             // 
@@ -161,6 +95,7 @@
             this.btnPlus.TabIndex = 3;
             this.btnPlus.Text = ">";
             this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Visible = false;
             // 
             // btnBack
             // 
@@ -205,9 +140,9 @@
             this.flowNewsPanel.Cursor = System.Windows.Forms.Cursors.Default;
             this.flowNewsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowNewsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowNewsPanel.Location = new System.Drawing.Point(100, 34);
+            this.flowNewsPanel.Location = new System.Drawing.Point(0, 34);
             this.flowNewsPanel.Name = "flowNewsPanel";
-            this.flowNewsPanel.Size = new System.Drawing.Size(284, 287);
+            this.flowNewsPanel.Size = new System.Drawing.Size(384, 287);
             this.flowNewsPanel.TabIndex = 11;
             this.flowNewsPanel.WrapContents = false;
             // 
@@ -232,6 +167,7 @@
             this.btnHome.TabIndex = 9;
             this.btnHome.Text = "Главная";
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnNotification
             // 
@@ -258,15 +194,15 @@
             // 
             this.trvNotification.Location = new System.Drawing.Point(53, 30);
             this.trvNotification.Name = "trvNotification";
-            treeNode1.Name = "Create";
-            treeNode1.Tag = "Create";
-            treeNode1.Text = "Создать сообщение";
-            treeNode2.Name = "Open";
-            treeNode2.Tag = "Open";
-            treeNode2.Text = "Просмотреть сообщения";
+            treeNode9.Name = "Create";
+            treeNode9.Tag = "Create";
+            treeNode9.Text = "Создать сообщение";
+            treeNode10.Name = "Open";
+            treeNode10.Tag = "Open";
+            treeNode10.Text = "Просмотреть сообщения";
             this.trvNotification.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
+            treeNode9,
+            treeNode10});
             this.trvNotification.Size = new System.Drawing.Size(65535, 0);
             this.trvNotification.TabIndex = 14;
             this.trvNotification.Visible = false;
@@ -277,15 +213,15 @@
             // 
             this.trvMenu.Location = new System.Drawing.Point(13, 30);
             this.trvMenu.Name = "trvMenu";
-            treeNode3.Name = "CreateNews";
-            treeNode3.Tag = "CreateNews";
-            treeNode3.Text = "Создать новость";
-            treeNode4.Name = "UsersList";
-            treeNode4.Tag = "UsersList";
-            treeNode4.Text = "Список пользователей";
+            treeNode11.Name = "CreateNews";
+            treeNode11.Tag = "CreateNews";
+            treeNode11.Text = "Создать новость";
+            treeNode12.Name = "UsersList";
+            treeNode12.Tag = "UsersList";
+            treeNode12.Text = "Список пользователей";
             this.trvMenu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4});
+            treeNode11,
+            treeNode12});
             this.trvMenu.Size = new System.Drawing.Size(65535, 0);
             this.trvMenu.TabIndex = 13;
             this.trvMenu.Visible = false;
@@ -300,18 +236,15 @@
             this.Controls.Add(this.trvMenu);
             this.Controls.Add(this.trvNotification);
             this.Controls.Add(this.flowNewsPanel);
-            this.Controls.Add(this.panelLastNews);
             this.Controls.Add(this.panelControls);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(400, 400);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "MainForm";
+            this.Text = "Главная";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainForm_FormClosing);
             this.Load += new System.EventHandler(this.mainForm_Load);
             this.Resize += new System.EventHandler(this.mainForm_Resize);
-            this.panelLastNews.ResumeLayout(false);
-            this.panelLastNews.PerformLayout();
             this.panelControls.ResumeLayout(false);
             this.panelControls.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -320,12 +253,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.LinkLabel lblLastNews1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel lblLastNews2;
-        private System.Windows.Forms.LinkLabel lblLastNews4;
-        private System.Windows.Forms.LinkLabel lblLastNews3;
-        private System.Windows.Forms.Panel panelLastNews;
         private System.Windows.Forms.Panel panelControls;
         private System.Windows.Forms.FlowLayoutPanel flowNewsPanel;
         private System.Windows.Forms.Panel panel1;
